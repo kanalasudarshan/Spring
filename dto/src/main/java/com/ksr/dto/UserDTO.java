@@ -1,11 +1,21 @@
 package com.ksr.dto;
 
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.NotEmpty;
+
 public class UserDTO  {
 	
 	private long userId;
+	@NotEmpty
+	@Size(min =10, max = 30)
 	private String userName;
+	@NotEmpty
 	private String password;
+	@NotEmpty
+	@Size(min =5, max = 50)
 	private String firstName;
+	@Size(max = 50)
 	private String lastName;
 	private boolean isActive;
 	private boolean isEmailVerified;
@@ -56,7 +66,10 @@ public class UserDTO  {
 	
 	@Override
 	public String toString() {
-		return "UserDTO [userId=" + userId + ", userName=" + userName+ ", firstName=" + firstName + ", lastName=" + lastName+ ", isActive=" + isActive + ", isEmailVerified="+ isEmailVerified + "]";
+		return "UserDTO [userId=" + userId + ", userName=" + userName
+				+ ", password=" + password + ", firstName=" + firstName
+				+ ", lastName=" + lastName + ", isActive=" + isActive
+				+ ", isEmailVerified=" + isEmailVerified + "]";
 	}
 	
 	
