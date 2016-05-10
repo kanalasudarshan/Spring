@@ -6,25 +6,28 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.ksr.service.admin.UserService;
 
+@RequestMapping("/admin")
 @Controller
 public class UserController {
 	
 	@Autowired
 	UserService UserService;
 	
-	@RequestMapping("/home")
-	public String getHome(){
-		return "index";
+	@RequestMapping("/crateuser")
+	public String createUser(){
+		
+		return "home";
 	}
 	
-	@RequestMapping("/login")
-	public String getLogin(){
-		return "login";
+	@RequestMapping("/updateuser")
+	public String updateUser(){
+		
+		return "home";
 	}
 	
-	@RequestMapping("/logout")
-	public String getLogout(){
-		return "logout";
-	}	
-
+	@RequestMapping("/deleteuser")
+	public String deleteUser(){
+		
+		return "home";
+	}
 }
