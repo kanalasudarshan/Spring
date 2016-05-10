@@ -1,0 +1,73 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>  
+  <artifactId>controller</artifactId>
+  <packaging>war</packaging>
+  
+  
+  <parent>
+    <groupId>com.ksr</groupId>
+    <artifactId>ksrapp</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+
+<dependencies>
+	<dependency>  		
+		<groupId>com.ksr</groupId>
+		<artifactId>dto</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>	
+	<dependency>  		
+		<groupId>com.ksr</groupId>
+		<artifactId>service</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
+	<dependency>  		
+		<groupId>com.ksr</groupId>
+		<artifactId>common-utils</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency> 	
+</dependencies>
+  
+  <build>
+  	<finalName>ksr</finalName>
+  	<plugins>
+  		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<configuration>
+				<source>1.7</source>
+				<target>1.7</target>
+			</configuration>
+		</plugin>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-war-plugin</artifactId>
+			<configuration>					
+				<outputDirectory>E:\Tomcat 7.2\webapps\</outputDirectory>
+			</configuration>
+		</plugin>
+		<plugin>
+			<artifactId>maven-clean-plugin</artifactId>
+			<version>2.6.1</version>
+			<configuration>
+				<filesets>
+					<fileset>
+						<directory>E:\Tomcat 7.2</directory>
+						<includes>
+							<include>logs/*.*</include>
+							<include>webapps/ksr/**</include>
+							<include>work/Catalina/**</include>
+							<include>temp/*.*</include>
+						</includes>
+						<excludes>
+							<exclude>**/important.log</exclude>
+							<exclude>**/another-important.log</exclude>
+						</excludes>
+						<followSymlinks>false</followSymlinks>
+					</fileset>
+				</filesets>
+			</configuration>
+		</plugin>
+  	</plugins>
+  </build>
+</project>

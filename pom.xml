@@ -1,0 +1,119 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.ksr</groupId>
+  <artifactId>ksrapp</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>ksrapp</name>
+  
+  
+<properties>
+  	<com.ksr.version>0.1</com.ksr.version>
+  	<org.springframework.version>4.2.0.RELEASE</org.springframework.version>
+  	<org.springframework.security.version>4.1.0.RELEASE</org.springframework.security.version>
+	<javax.servlet>3.1.0</javax.servlet>	
+	<mysql.version>5.1.6</mysql.version>	
+	<tiles.version>3.0.5</tiles.version>	
+	<tiles.request.api.version>1.0.6</tiles.request.api.version>
+	<log4j.version>1.2.17</log4j.version>
+	<guava.version>19.0</guava.version>
+</properties>
+ 
+
+<dependencies>
+
+	<dependency>
+		<groupId>com.google.guava</groupId>
+		<artifactId>guava</artifactId>
+		<version>${guava.version}</version>
+	</dependency>
+	
+
+	<dependency>
+		<groupId>org.apache.tiles</groupId>
+		<artifactId>tiles-servlet</artifactId>
+		<version>${tiles.version}</version>
+	</dependency>
+
+	<dependency>
+		<groupId>org.apache.tiles</groupId>
+		<artifactId>tiles-core</artifactId>
+		<version>${tiles.version}</version>
+	</dependency>
+
+	<dependency>
+		<groupId>org.apache.tiles</groupId>
+		<artifactId>tiles-request-api</artifactId>
+		<version>${tiles.request.api.version}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context-support</artifactId>
+		<version>${org.springframework.version}</version>
+	</dependency>
+	
+	
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-jdbc</artifactId>
+		<version>${org.springframework.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-webmvc</artifactId>
+		<version>${org.springframework.version}</version>
+	</dependency>
+		
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-core</artifactId>
+		<version>${org.springframework.security.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-config</artifactId>
+		<version>${org.springframework.security.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-web</artifactId>
+		<version>${org.springframework.security.version}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context</artifactId>
+		<version>${org.springframework.version}</version>
+	</dependency>
+		
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-web</artifactId>
+		<version>${org.springframework.version}</version>
+	</dependency>
+		
+	
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>${mysql.version}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>log4j</groupId>
+		<artifactId>log4j</artifactId>
+		<version>${log4j.version}</version>
+	</dependency>
+		
+</dependencies>
+
+<modules>
+  	<module>service</module>
+  	<module>domain</module>
+  	<module>dto</module>
+  	<module>common-utils</module>  
+  	<module>controller</module>
+</modules>
+
+</project>
