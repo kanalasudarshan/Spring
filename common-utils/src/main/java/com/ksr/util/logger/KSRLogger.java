@@ -4,24 +4,25 @@ import org.apache.log4j.Logger;
 
 public class KSRLogger{
 	
-		
-	public static void debug(Class classObj,String message){
-		Logger.getLogger(classObj).debug(message);
+	public static <T> void trace(Class<T> classObj,String message){
+		Logger.getLogger(classObj).trace(message);
 	}
-	
-	public static void info(Class classObj,String message){
+	public static <T> void debug(Class<T> classObj,String message){
+		Logger.getLogger(classObj).debug(message);
+	}	
+	public static <T> void info(Class<T> classObj,String message){
 		Logger.getLogger(classObj).info(message);
 	}
 	
-	public static void warn(Class classObj,String message){
+	public static <T> void warn(Class<T> classObj,String message){
 		Logger.getLogger(classObj).warn(message);
 	}
 	
-	public static void error(Class classObj,Exception exception){
+	public static  <T>void error(Class<T> classObj,Exception exception){
 		Logger.getLogger(classObj).error(classObj, exception);
 	}
 	
-	public static void fetal(Class classObj,String message){
+	public static <T> void fetal(Class<T> classObj,String message){
 		Logger.getLogger(classObj).fatal(message);
 	}
 

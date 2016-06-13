@@ -8,7 +8,7 @@
 <table>
 	<tr>
 		<td>Username </td>
-		<td><input type="text" name="userName" /></td>
+		<td><input type="text" name="userName" value="${userDTO.userName}" /></td>
 		<td><form:errors path="userDTO.userName"/></td>
 	</tr>
 	<tr>
@@ -18,13 +18,13 @@
 	</tr>
 	<tr>
 		<td>First Name</td>
-		<td><input type="text" name="firstName" /></td>
+		<td><input type="text" name="firstName" value="${userDTO.firstName}"/></td>
 		<td><form:errors path="userDTO.firstName"/></td>
 	</tr>
 	<tr>
 		<td>Last Name</td>
-		<td><input type="text" name="lastName" /></td>
-		<td><form:errors path="userDTO.lastName"/></td>
+		<td><input type="text" name="lastName" value="${userDTO.lastName}"/></td>
+		<td><form:errors path="userDTO.lastName" /></td>
 	</tr>	
 	<tr>		
 		<td colspan="2"><input type="submit" value="Save" /></td>
